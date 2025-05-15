@@ -1,161 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RC TRANSPORTES</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RC Transportes - Em Manutenção</title>
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #07263D; /* Cor exata da logo */
-      color: white;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      color: #333;
     }
-    header {
-      padding: 20px;
-    }
-    header img {
-      max-width: 200px;
-    }
-    h1 {
-      font-size: 2.5em;
-      color: #ffd700;
-    }
-    p {
-      font-size: 1.2em;
-    }
-    section {
-      padding: 30px 10px;
-    }
-    .highlight {
-      color: #ffd700;
-      font-weight: bold;
-      font-size: 1.8em;
-    }
-    .formulario {
-      background-color: #07263D;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .formulario input, .formulario textarea {
-      width: 90%;
-      max-width: 400px;
-      padding: 10px;
-      margin: 10px auto;
-      display: block;
-      border: none;
-      border-radius: 5px;
-      background-color: #ffffff;
-      color: #000000;
-      font-size: 1em;
-    }
-    .formulario textarea {
-      resize: vertical;
-    }
-    .formulario button {
-      background-color: #ffd700;
-      color: #0a2a44;
-      border: none;
-      padding: 12px 24px;
-      font-size: 1.1em;
-      border-radius: 8px;
-      margin-top: 10px;
-      cursor: pointer;
-    }
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 100;
-    }
-    .whatsapp-float a {
-      display: block;
-      margin-bottom: 10px;
-    }
-    .whatsapp-float img {
-      width: 60px;
-    }
-    .button {
-      display: inline-block;
-      background-color: #ffd700;
-      color: #0a2a44;
-      padding: 15px 25px;
-      border-radius: 8px;
-      font-size: 1.2em;
-      text-decoration: none;
+    .logo {
       margin-top: 20px;
     }
-    .banner {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
+    .mensagem {
+      font-size: 24px;
+      margin: 40px 20px;
+    }
+    .icone {
+      font-size: 50px;
+      margin: 20px 0;
+    }
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      font-size: 16px;
+      color: #888;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.jpg" alt="Logo RC Transportes">
-    <h1>RC TRANSPORTES</h1>
-    <p>Especialistas em transporte de cargas com segurança, agilidade e compromisso.</p>
-  </header>
-
-  <section>
-    <h2 class="highlight">Nossos Serviços</h2>
-    <p>Transporte de cargas fracionadas e fechadas em todo o Brasil, com rastreamento em tempo real e suporte 24h.</p>
-  </section>
-
-  <img src="banner.jpg" alt="Frota de veículos" class="banner">
-
-  <section>
-    <p>Você tem um e-commerce ou precisa transportar cargas com segurança?</p>
-    <p><strong>Simule seu frete agora mesmo!</strong></p>
-
-    <form class="formulario" onsubmit="enviarWhatsApp(); return false;">
-      <input type="text" id="nome" placeholder="Seu nome" required>
-      <input type="tel" id="telefone" placeholder="Telefone com DDD" required>
-      <input type="text" id="origem" placeholder="Origem da carga" required>
-      <input type="text" id="destino" placeholder="Destino da carga" required>
-      <textarea id="descricao" rows="4" placeholder="Descreva sua carga..." required></textarea>
-      <button type="submit">Simular Frete</button>
-    </form>
-  </section>
-
-  <div class="whatsapp-float">
-    <a href="https://wa.me/5511940161745" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp 1">
-    </a>
+  <div class="logo">
     <a href="https://wa.me/5511915635794" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp 2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="100">
     </a>
   </div>
 
-  <script>
-    function enviarWhatsApp() {
-      const nome = document.getElementById('nome').value;
-      const telefone = document.getElementById('telefone').value;
-      const origem = document.getElementById('origem').value;
-      const destino = document.getElementById('destino').value;
-      const descricao = document.getElementById('descricao').value;
+  <div class="mensagem">
+    <div class="icone">⚙️🚧</div>
+    <strong>Site em manutenção</strong><br>
+    Estamos trabalhando para voltar em breve.
+  </div>
 
-      const mensagem =
-        `*Simulação de Frete - RC TRANSPORTES*%0A` +
-        `*Nome:* ${nome}%0A` +
-        `*Telefone:* ${telefone}%0A` +
-        `*Origem:* ${origem}%0A` +
-        `*Destino:* ${destino}%0A` +
-        `*Carga:* ${descricao}`;
-
-      const link1 = `https://wa.me/5511940161745?text=${mensagem}`;
-      const link2 = `https://wa.me/5511915635794?text=${mensagem}`;
-
-      window.open(link1, '_blank');
-      setTimeout(() => {
-        window.open(link2, '_blank');
-      }, 500);
-    }
-  </script>
+  <footer>
+    Aguardando pagamento... e compra do domínio.
+  </footer>
 </body>
 </html>
